@@ -3,41 +3,77 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="assets/calendar.png">
+    <link rel="shortcut icon" type="x-icon" href="assets/image/calendar.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>ڕۆژژمێری کوردی</title>
+    <title>ڕۆژژمێری کوردای</title>
 </head>
-<header>
-    <div class="header-container">
 
-        <div class="calendars-type">
-            <div>
-                ڕۆژژمێری کوردی
-            </div>
-            <div>
-                ڕۆژژمێری زاینی
-            </div>
-        </div>
-        <h1>ڕۆژژمێری کوردی</h1>
-
-    </div>
-</header>
 
 <body>
+    <header>
+        <nav class="header-container">
+
+            <!-- <div class="calendars-type">
+                <div>
+                    ڕۆژژمێری کوردی
+                </div>
+                <div>
+                    ڕۆژژمێری زاینی
+                </div>
+            </div> -->
+            <h1 id="calendar-name">ڕۆژژمێری کوردان</h1>
+
+        </nav>
+    </header>
     <div class="container">
 
-
         <div class="calendar-body">
-            <div class="current-date">28/1/2725</div>
-            <div class="top-table">
-                <h2>خاکەلێوە</h2>
-                <p>oinr jvbkbjvkjbs,h nbghgiur</p>
+            <div class="current-date">
+                <div class="current-time"></div>
+                <div class="contain">
+
+                    <div class="current-day"></div>
+                    <div class="current-kurdish-day"></div>
+                </div>
+                <div class="converter">
+                    <p>لێرە بەرواری زاینی بگۆڕە بۆ بەرواری کوردی</p>
+                    <input type="text" id="date-input">
+                </div>
             </div>
+
+            <div class="calendar-table">
+                <div class="calendar-top">
+
+                    <h2 id="month-name"></h2>
+                    <p id="discribe-month"></p>
+                    <div class="icons">
+                        <div class="next-left icon"><img src="assets/image/right-arrow.png" alt="Left arrow image">
+                        </div>
+                        <div class="prev-right icon"><img src="assets/image/right-arrow.png" alt="right arrow image">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="calendar-grid" id="date-container">
+
+                    <div class="day">یەک شەمە</div>
+                    <div class="day">دوو شەمە</div>
+                    <div class="day">سێ شەمە</div>
+                    <div class="day">چوار شەمە</div>
+                    <div class="day">پێنج شەمە</div>
+                    <div class="day">هەینی</div>
+                    <div class="day">شەمە</div>
+
+                </div>
+
+            </div>
+
 
 
         </div>
     </div>
+    <script src="action.js"></script>
 </body>
 
 </html>

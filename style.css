@@ -1,19 +1,35 @@
+@font-face {
+    font-family: 'Rabar021';
+    src: url('assets/font/NizarNastaliqKurdish.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ir_bl';
+    src: url('assets/font/ir_bl.ttf') format(truetype);
+}
+
 body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-header {
+nav {
     height: 80px;
     background-color: rgb(95, 2, 2);
     color: white;
-}
-.header-container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
+    padding: 0 2rem;
 }
+
+#calendar-name {
+    font-family: "Rabar021";
+}
+
 .container {
     width: 100%;
     height: 100vh;
@@ -23,11 +39,140 @@ header {
     /* background-image: url('assets/IMG_0273.JPG'); */
 }
 
-.calendar-body{
+.calendar-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    margin: 1%;
+    height: 100vh;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 5rem);
+    direction: rtl;
+    font-family: 'ir_bl', sans-serif;
+}
+
+.calendar-table {
+    background-color: rgba(3, 97, 16, 0.781);
+    border-radius: 10px;
+    padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-border: 1px solid grey;
-border-radius: 10px;
+    width: 45%;
+    height: 60ch;
+}
+
+.calendar-top {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+    font-family: 'ir_bl', sans-serif;
+}
+
+#discribe-month {
+    font-size: 12px;
+    text-align: right;
+}
+
+
+
+.day {
+
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.date {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.date:hover {
+    background-color: rgba(199, 197, 197, 0.288);
+    color: black;
+}
+
+.date.today {
+    background-color: #ffc107;
+    /* Bright yellow background */
+
+    font-weight: bold;
+}
+
+.date.empty {
+    visibility: hidden;
+
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.icon img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.next-left {
+    transform: rotate(180deg);
+}
+
+.current-time {
+    font-size: 5rem;
+    position: relative;
+    top: 25%;
+    left: 10%;
+    font-family: 'ir_bl';
+}
+
+.contain {
+    display: flex;
+    gap: 8%;
+    position: relative;
+    top: 20%;
+    left: 10%;
+    font-family: 'ir_bl';
+}
+
+.current-date {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+
+.current-day{
+    background: green;
+    width: 40%;
+    height: 30px;
+}
+
+.converter{
+position: relative;
+top: 30%;
+left: 10%;
 }
